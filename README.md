@@ -1,4 +1,4 @@
-> A [Ghost](https://ghost.org/) theme focused on photography.
+# A [Ghost](https://ghost.org/) theme focused on photography.
 
 ### [→ Live Demo](http://bensventur.es/)
 ### [→ Download](https://github.com/bensventures/glimpse/archive/master.zip)
