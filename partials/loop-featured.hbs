@@ -1,0 +1,10 @@
+
+{{! This is the featured post loop - each post will be output using this markup }}
+{{#foreach posts}}
+{{#if featured}}{{#if image}}
+<figure>
+    <img src="{{image}}" alt="{{{title}}}" />
+    <figcaption class="main-header-content inner">{{title}}</figcaption>
+</figure>
+{{/if}}{{/if}}
+{{/foreach}}

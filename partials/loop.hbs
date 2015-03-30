@@ -1,0 +1,21 @@
+{{! Previous/next page links - only displayed on page 2+ }}
+<div class="extra-pagination inner">
+    {{pagination}}
+</div>
+<div class="post-grid">
+{{! This is the post loop - each post will be output using this markup }}
+{{#foreach posts}}
+<article class="{{post_class}}">
+    <header class="post-header">
+        {{#if image}}
+        <figure>
+            <a href="{{url}}"><img src="{{image}}" alt="{{{title}}}" /></a>
+        </figure>
+        {{/if}}
+        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+    </header>
+</article>
+{{/foreach}}
+</div>
+{{! Previous/next page links - displayed on every page }}
+{{pagination}}

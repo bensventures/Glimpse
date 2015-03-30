@@ -1,0 +1,52 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{navigation}}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+<main class="content clearfix" role="main">
+
+    <article class="{{post_class}} clearfix">
+
+        {{#if image}}
+        <figure class="post-photo">
+            <img src="{{image}}" alt="{{{title}}}" />
+        </figure>
+        {{/if}}
+
+        <aside>
+            <header class="post-header">
+                <section class="post-meta">
+                    <h1 class="post-title">{{title}}</h1>
+                    <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+                </section>
+            </header>
+
+            <section class="post-content">
+                {{content}}
+            </section>
+
+            <footer class="post-footer">
+
+                <section class="share">
+                    <h4>Share this post</h4>
+                    <a class="icon-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                        <span class="hidden">Twitter</span>
+                    </a>
+                    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                        <span class="hidden">Facebook</span>
+                    </a>
+                </section>
+
+            </footer>
+        </aside>
+    </article>
+
+</main>
+
+{{/post}}
