@@ -1,6 +1,6 @@
 # A [Ghost](https://ghost.org/) theme focused on photography.
 
-### [→ Live Demo](http://bensventur.es/)
+### [→ Live Demo](http://glimpse.bensventur.es/)
 ### [→ Download](https://github.com/bensventures/glimpse/archive/master.zip)
 
 ## Table of contents
